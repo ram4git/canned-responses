@@ -48,8 +48,8 @@ $_MGM['DBPassword'] = "";
 $_MGM['DBName'] = "databases/main.db"; // File location for SQLite.
 $_MGM['DBPort'] = 0; // 3306 = MySQL Default, 5432 = PostgreSQL Default.
 $_MGM['DBPrefix'] = "";
-$_MGM['adminEmail'] = "name@example.com";
-$_MGM['PublicAPIWhiteListedIPs'] = array(); // IP Addresses to whitelist access to public API to list canned responses.
+$_MGM['adminEmail'] = "admin@robogenix.ai";
+$_MGM['PublicAPIWhiteListedIPs'] = array(['localhost', '*.ngrok.io']); // IP Addresses to whitelist access to public API to list canned responses.
 require_once("db{$_MGM['DBType']}.php");
 
 putenv("TZ=US/Central");

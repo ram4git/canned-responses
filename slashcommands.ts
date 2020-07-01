@@ -199,6 +199,7 @@ export class CannedResponsesSlashCommand implements ISlashCommand {
         let text = 'These are the keys available:\n';
 
         const result = await http.get(`${apiURL}response/get-all`);
+        console.log("RESULT=", result);
         if (result.data.type === 'success') {
             let count = 0;
             result.data.results.forEach((response) => {
